@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Countdown = (props) => {
-  return (
-    <div>Countdown</div>
-  );
-};
-
-export default Countdown;
+export default class Countdown extends Component {
+  render() {
+    return (
+      <div>Countdown</div>
+    );
+  }
+}
