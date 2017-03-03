@@ -14,11 +14,11 @@ export default class Controls extends Component {
   }
 
   render() {
-    const { timerStatus } = this.props;
+    const { status } = this.props;
     const renderStartStopButton = (params) => {
-      if (timerStatus === 'started') {
+      if (status === 'started') {
         return <button className="button secondary" onClick={this.handleOnClick('paused')}>Pause</button>
-      } else if (timerStatus === 'paused') {
+      } else if (status === 'paused' || status === 'stopped') {
         return <button className="button primary" onClick={this.handleOnClick('started')}>Start</button>
       }
     };
@@ -33,6 +33,6 @@ export default class Controls extends Component {
 }
 
 Controls.propTypes = {
-  timerStatus: React.PropTypes.string.isRequired,
+  status: React.PropTypes.string.isRequired,
   onStatusChange: React.PropTypes.func.isRequired
 };

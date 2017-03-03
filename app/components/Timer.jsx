@@ -4,13 +4,6 @@ import TimerForm from 'TimerForm';
 import Controls from 'Controls';
 
 export default class Timer extends Component {
-  // old style
-  // constructor(props) {
-  //   super(props);
-  //   this.handleSetTimer = this.handleSetTimer.bind(this);
-  //   this.state = { count: 0, timerStatus: 'stopped' };
-  // }
-
   state = {
     count: 0,
     timerStatus: 'stopped'
@@ -19,7 +12,7 @@ export default class Timer extends Component {
   // it is called everytime props or state updates
   componentDidUpdate(prevProps, prevState) {
     if (this.state.timerStatus !== prevState.timerStatus) {
-      switch(this.state.timerStatus) {
+      switch (this.state.timerStatus) {
         case 'started':
           this.startTimer();
           break;
@@ -73,7 +66,7 @@ export default class Timer extends Component {
     const { count, timerStatus } = this.state;
     const renderControlArea = () => {
       if (timerStatus !== 'stopped') {
-        return <Controls timerStatus={timerStatus} onStatusChange={this.handleStatusChange} />;
+        return <Controls status={timerStatus} onStatusChange={this.handleStatusChange} />;
       } else {
         return <TimerForm onSetTimer={this.handleSetTimer} />;
       }
