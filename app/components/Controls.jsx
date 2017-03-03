@@ -12,7 +12,7 @@ export default class Controls extends Component {
       this.props.onStatusChange(newStatus); // newStatus is passed via closure
     }
   }
-  
+
   render() {
     const { countdownStatus } = this.props;
     const renderStartStopButton = (params) => {

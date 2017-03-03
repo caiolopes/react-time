@@ -64,6 +64,11 @@ export default class Countdown extends Component {
     });
   }
   
+  componentWillUnmount() {
+    clearInterval(this.timer);
+    this.timer = undefined;
+  }
+  
   render() {
     const { count, countdownStatus } = this.state;
     const renderControlArea = () => {
