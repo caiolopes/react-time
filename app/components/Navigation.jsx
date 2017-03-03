@@ -6,16 +6,16 @@ const Navigation = (props) => {
     <div className="top-bar">
       <div className="top-bar-left">
         <ul className="menu">
-          <li className="menu-text">React Timer App</li>
+          <li className="menu-text">React Time App</li>
           <li>
             <IndexLink
               to="/"
-              activeClassName="active-link">Timer</IndexLink>
+              activeClassName="active-link">Stopwatch</IndexLink>
           </li>
           <li>
             <Link
-              to="/countdown"
-              activeClassName="active-link">Countdown</Link>
+              to="/timer"
+              activeClassName="active-link">Timer</Link>
           </li>
         </ul>
       </div>

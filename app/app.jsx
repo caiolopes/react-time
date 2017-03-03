@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import Main from 'Main';
+import Stopwatch from 'Stopwatch';
 import Timer from 'Timer';
-import Countdown from 'Countdown';
 
 // Load foundation
 import '!style!css!foundation-sites/dist/css/foundation.min.css';
@@ -15,8 +15,8 @@ import '!style!css!sass!applicationStyles';
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
-      <Route path="countdown" component={Countdown} />
-      <IndexRoute component={Timer} />      
+      <Route path="timer" component={Timer} />
+      <IndexRoute component={Stopwatch} />      
     </Route>
   </Router>,
   document.getElementById('app')
