@@ -6,7 +6,6 @@ import Stopwatch from 'Stopwatch';
 import Timer from 'Timer';
 
 // Load foundation
-import '!style!css!foundation-sites/dist/css/foundation.min.css';
 $(document).foundation();
 
 // App CSS
