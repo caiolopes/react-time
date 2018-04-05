@@ -8,7 +8,7 @@ export default class Timer extends Component {
     count: 0,
     timerStatus: 'stopped'
   };
-  
+
   // it is called everytime props or state updates
   componentDidUpdate(prevProps, prevState) {
     if (this.state.timerStatus !== prevState.timerStatus) {
@@ -43,7 +43,7 @@ export default class Timer extends Component {
       }
     }, 1000);
   }
-  
+
   handleSetTimer = (seconds) => {
     this.setState({
       count: seconds,
@@ -56,12 +56,12 @@ export default class Timer extends Component {
       timerStatus: newStatus
     });
   }
-  
+
   componentWillUnmount() {
     clearInterval(this.interval);
     this.interval = undefined;
   }
-  
+
   render() {
     const { count, timerStatus } = this.state;
     const renderControlArea = () => {
@@ -71,7 +71,7 @@ export default class Timer extends Component {
         return <TimerForm onSetTimer={this.handleSetTimer} />;
       }
     };
-    
+
     return (
       <div>
         <h1 className="page-title">Timer</h1>

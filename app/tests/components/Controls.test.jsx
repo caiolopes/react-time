@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import expect from 'expect';
-import $ from 'jQuery';
 import TestUtils from 'react-addons-test-utils';
 
 import Controls from 'Controls';
@@ -18,7 +17,7 @@ describe('Controls', () => {
       const $pauseButton = $el.find('button:contains(Pause)');
       expect($pauseButton.length).toBe(1);
     });
-    
+
     it('should render start when paused', () => {
       const controls = TestUtils.renderIntoDocument(<Controls status="paused" onStatusChange={() => {}} />);
       const $el = $(ReactDOM.findDOMNode(controls));

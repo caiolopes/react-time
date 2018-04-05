@@ -5,7 +5,7 @@ export default class Clock extends Component {
     let minutes, seconds;
     seconds = totalSeconds % 60;
     minutes = Math.floor(totalSeconds / 60);
-    
+
     if (seconds < 10) {
       seconds = '0' + seconds;
     }
@@ -16,7 +16,7 @@ export default class Clock extends Component {
 
     return `${minutes}:${seconds}`;
   }
-  
+
   render() {
     const { totalSeconds } = this.props;
 

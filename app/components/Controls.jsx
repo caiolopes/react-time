@@ -5,7 +5,7 @@ export default class Controls extends Component {
     super(props);
     this.handleOnClick = this.handleOnClick.bind(this);
   }
-  
+
   handleOnClick(newStatus) {
     // this is what is called when the user clicks a button
     return () => {

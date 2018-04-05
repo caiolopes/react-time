@@ -4,7 +4,7 @@ export default class TimerForm extends Component {
   constructor(props) {
     super(props);
   }
-  
+
   handleSubmit = (event) => {
     event.preventDefault();
     const seconds = this._seconds.value;
@@ -14,14 +14,14 @@ export default class TimerForm extends Component {
       this._seconds.focus();
     }
   }
-  
+
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           <input ref={input => this._seconds = input} type="text" placeholder="Enter time in seconds" />
           <button className="button expanded">Start</button>
-        </form>  
+        </form>
       </div>
     );
   }
